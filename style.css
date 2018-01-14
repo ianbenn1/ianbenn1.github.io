@@ -54,12 +54,17 @@ h6 {
     width: 100%;
     height: 225px;
     margin-top: -290px;
-    Background-color: #4D4D4D;/* Your Color */
+    background-color: #4D4D4D;
+    background-image: url('freeUsageGenericCode.jpg');
+
 }
 
 .topnav {
+
+
 	width:100%;
 	background-color: #4D4D4D;
+	/*background-image: url('freeUsageGenericCode.jpg');*/
 	overflow: hidden;
 	text-align: justify;
 }
@@ -75,6 +80,9 @@ h6 {
 	margin-right: 4%;
 	margin-left: 5%;
 }
+
+
+
 .active {
 	/*margin-right: calc(100% / 5);*/
 }
