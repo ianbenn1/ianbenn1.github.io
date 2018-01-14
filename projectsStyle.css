@@ -99,8 +99,9 @@ h6 {
 	text-align: center;
 	font: normal 18px sans-serif;
 	bottom: 0;
-	margin-top: 80px;
-	margin-bottom: -20px;
+	position: absolute;
+	/*margin-top: 80px;*/
+	margin-bottom: -110px;
 }
 
 
