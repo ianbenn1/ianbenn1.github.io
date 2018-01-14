@@ -1,3 +1,8 @@
+html, body {
+	padding:0; 
+	margin:0; 
+	height:100%;
+}
 body{
     background: rgb(120, 10, 40);
 }
@@ -51,7 +56,7 @@ h6 {
 	width: 100%;
 	height: 220px;
 	overflow: hidden;
-	Background-color: #4D4D4D;
+	background-color: #4D4D4D;
 }
 
 .topSquare{
@@ -98,10 +103,10 @@ h6 {
 	width: 100%;
 	text-align: center;
 	font: normal 18px sans-serif;
-	bottom: 0;
 	position: absolute;
-	/*margin-top: 80px;*/
-	margin-bottom: -110px;
+	bottom: 0; 
+	left: 0; 
+	right: 0;
 }
 
 
