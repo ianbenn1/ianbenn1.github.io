@@ -1,53 +1,210 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Ian Bennett</title>
-    <meta name = "viewport" content = "width=device-width, initial-scale:1">
+    <head>
+        <link rel = "icon" href = "img/dos.png" type = "image/gif"/>
+        <meta name = "description" content = "Ian Bennett is a Computer Scientist studying at the University of Guelph.">
+        <meta name = "keywords" content = "Ian Bennett, Programmer, Computer Science, University of Guelph, Software Engineering">
+        <meta name = "author" content = "Ian Bennett">
+        <meta name = "copyright" content = "© Ian Bennett 2017-2018">
+        <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans:600|Open+Sans+Condensed:300" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/A2483A1D-D5F1-5B43-8238-23272D7F73B3/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            function toProjects()
+            {
+                $('html, body').animate({scrollTop: $("#projects").offset().top},'slow');
+                
+            }
+        </script>
 
-    <div class="image-cropper"><img class="img-circle" src="betterLogo.png"></div>
-    <div class="topSquare"></div>
-    <div class="topnav" id="webTopnav">
-      <a class="second" href="aboutMe.html">About Me</a>
-      <a class="second" href="projects.html">Projects</a>
-      <a class="third" href="contact_me.html">Contact Me</a>
-      <a class="fourth" href="resume.html">Resume</a>
-   </div>
 
-    
-    <link href="style.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-    
-    
+        <title>Ian Bennett</title>
+    </head>
 
-<div class="main">
 
- 
+    <body style = "background-color: rgb(120, 46, 57);">
+        <div class = "group">
+            <div class = "main">
+                <h1 id = "name"> Ian Bennett </h1>
+                <h3 id = "description">Programmer and Computer Enthusiast</h3>
+            </div>
+        </div>
+        <img id = "down" src = "img/down-arrow.png" onclick = "toProjects()"/>
+        <div class = "group2">
+            <a name = "projects"></a>
+            <h1 id = "projects"> Projects </h1>
+            <table class = "test" style="height: 300px; width: 600px; margin-left: auto; margin-right: auto;" cellpadding="20" cellspacing = "20">
+                <tbody>
+                    <tr>
+
+                        <td>
+                            <div class = "p-items">
+                                <p onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/windowsFileMaker');"> Windows File Creator </p>
+                                <img src = "img/file.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/windowsFileMaker');">
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <div class = "p-items">
+                                <p onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/Bing_Background_Scraper');"> Image Web Scraper </p>
+                                <img src = "img/webScrape.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/Bing_Background_Scraper');">
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class = "p-items">
+                                <p onclick = "window.open('https://github.com/ianbenn1');"> More School Work </p>
+                                <img src = "img/book.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1');">
+
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "p-items">
+                                <p onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');"> Discord Bot </p>
+                                <img src = "img/discord.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');">
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "p-items">
+                                <p onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');"> Code for this website</p>
+                                <img src = "img/websiteCode.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');">
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class = "p-items">
+                                <p onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');"> Spell Checker using hash table </p>
+                                <img src = "img/spellCheck.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');">
+                            </div>
+                        </td>
+
+                        
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 onclick = "window.open('https://github.com/ianbenn1');"> More Projects </h3>
         </div>
 
-    
-    <h1>Ian Bennett</h1>
-    <h3>Software Engineering Student</h3>
-    
-    <h3>Hi! My name is Ian. I'm in school this semester, and rather busy due to my Software Systems Development and Integration class, so updates to this website will be few and sporadic. I'd like to thank you for visiting though, and probably appologise for the formatting if you're viewing on mobile!</h3>
-    <h3>My most recent projects are a python project that scrapes the daily Bing background image (downloadable under projects), and the game of Snake below.</h3>
-    <h3>Cheers -Ian!</h3>
-    <a href="page2.html" style="margin-left: 46.5%;">Click here for snake!</a>
-</div>
+        <div class = "group3">
 
-<footer class="footer" style="margin-bottom: -90px;">
+            <a name = "skills"></a>
+            <h1 id = "skills"> Skills </h1>
+            <h3 class = "skill-title"> <u> Languages </u> </h3>
+            <table class = "test" style="height: 100px; width: 600px; margin-left: auto; margin-right: auto;" cellpadding="20" cellspacing = "20">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class = "p-items">
 
-      
+                                <img src = "img/python.png" width="60" height="60">
+                                <p> Python </p>
 
-      <p class="footer-links">
-        <a href="index.html">Home</a>
-      </p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "p-items">
+                                <img src = "img/java.png" width="60" height="60">
+                                <p> Java </p>
 
-      <p class="footerName">Ian Bennett &copy; 2017-2018</p>
-      <p class="affiliated">[Cerf Software][Cinderblock Software]</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "p-items">
+                                <img src = "img/html.png" width="60" height="60">
+                                <p> HTML/CSS </p>
 
-    </footer>
+                            </div>
+                        </td>
 
-    </body>
+                        <td>
+                            <div class = "p-items">
+
+                                <img src = "img/c-logo.png" width="60" height="60">
+                                <p> C/C# </p>
+                            </div>
+
+                        </td>
+
+                        <td>
+                            <div class = "p-items">
+                                <img src = "img/perl.png" width="60" height="60">
+                                <p> Perl </p>
+                            </div>
+                        </td> 
+
+                        <!--<td>
+                            <div class = "p-items">
+                                <img src = "img/php.png">
+                                <p> PHP </p>
+                            </div>
+                        </td>-->
+
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--Platforms !-->
+
+            <h3 class = "skill-title"> <u> Platforms </u> </h3>
+            <table class = "test" style="height: 100px; width: 600px; margin-left: auto; margin-right: auto;" cellpadding="20" cellspacing = "20">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class = "p-items">
+
+                                <img src = "img/apple.png" width="60" height="60">
+                                <p> Macintosh </p>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "p-items">
+                                <img src = "img/windows.png" width="60" height="60">
+                                <p> Windows </p>
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class = "p-items">
+
+                                <img src = "img/linux.png" width="60" height="60">
+                                <p> Linux </p>
+                            </div>
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <form method = "post" action = "mailto:bennetti@uoguelph.ca">
+                <button class = "btn" type = "submit"> Contact Me </button>
+            </form>
+        </div>
+  </body>
+
+
+  <footer>
+      <div class = "fsec1">
+
+         
+          <p id = "creator"> Website Created By Ian Bennett </p>
+          &nbsp;
+          <p> <u> Icons From Flaticon.com </u> </p>
+          <p> <a href = "https://www.freepik.com/"> Freepix </a> -
+          <a href = "https://smashicons.com/"> Smashicons </a> -
+          <a href = "https://www.flaticon.com/authors/prosymbols"> Prosymbols </a> </p>
+          &nbsp;
+          <p> Copyright Ian Bennett 2017 - 2018</p>
+      </div>
+  </footer>
 
 </html>
