@@ -83,12 +83,20 @@
     overflow: hidden;
 }
 
+.group4 {
+    color: white;
+    text-align:center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-bottom: 4px solid white;
+    /*line-height: 20px;*/
+    overflow: hidden;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
 .main {
-    /*padding-left: 20px;
-    padding-right: 20px;
-    display: inline-block;
-    background-image: url("../img/back.png"); /*#303642;*/
-    /*#303642;*/
+    
     background-color: #35373d;
     padding-left: 20px;
     padding-right: 20px;
