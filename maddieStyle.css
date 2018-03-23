@@ -1,6 +1,6 @@
 h1{
     font-size: 72px;
-    font-family: "Comic Sans MS", "Courier New", sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     text-align: center;
     animation: blinker 1s linear infinite;
     -webkit-animation:colorchange 20s infinite alternate;
@@ -16,7 +16,7 @@ h2{
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
-  margin-bottom: -100px;
+  /*margin-bottom: -500px;*/
 }
 
 img{
@@ -82,3 +82,24 @@ img{
         color: pink;
       }
     }
+
+
+.wrapper {
+  overflow: hidden;
+}
+
+.sliding-background {
+  background: url("http://novabus.com/wp-content/uploads/2017/09/lfs_naturalgas.png") repeat-x;
+  height: 560px;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
