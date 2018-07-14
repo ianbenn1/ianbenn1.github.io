@@ -11,12 +11,27 @@
         <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans:600|Open+Sans+Condensed:300" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
         <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/A2483A1D-D5F1-5B43-8238-23272D7F73B3/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/cookies.js>
         <script>
             function toProjects()
             {
                 $('html, body').animate({scrollTop: $("#projects").offset().top},'slow');
                 
             }
+        </script>
+        <script>
+                $( document ).ready(function() {
+
+            if(Cookies.get('ibSiteTrack')!=undefined)
+            {
+                  console.log("Welcome back!");
+            }
+            else
+            {
+               console.log("Welcome, I see it's your first time here!. Hope you enjoy your stay!");
+               Cookies.set('ibSiteTrack','visited');                                                  
+            }
+        });
         </script>
 
 
