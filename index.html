@@ -2,16 +2,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8"/>
         <link rel = "icon" href = "img/term.png" type = "image/gif"/>
         <meta name = "description" content = "Ian Bennett is a Computer Scientist studying at the University of Guelph.">
         <meta name = "keywords" content = "Ian Bennett, Programmer, Computer Science, University of Guelph, Software Engineering">
         <meta name = "author" content = "Ian Bennett">
         <meta name = "copyright" content = "© Ian Bennett 2017-2018">
+        <!--<meta name = "viewport" content="width=device-width,initial-scale=1.0">-->
         <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans:600|Open+Sans+Condensed:300" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
         <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/A2483A1D-D5F1-5B43-8238-23272D7F73B3/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/cookies.js>
+        <script type="text/javascript" src="js/cookies.js"></script>
+        <script type="text/javascript" src="js/modal.js"></script>
         <script>
             function toProjects()
             {
@@ -22,16 +25,26 @@
         <script>
                 $( document ).ready(function() {
 
-            if(Cookies.get('ibSiteTrack')!=undefined)
-            {
-                  console.log("Welcome back!");
-            }
-            else
-            {
-               console.log("Welcome, I see it's your first time here!. Hope you enjoy your stay!");
-               Cookies.set('ibSiteTrack','visited');                                                  
-            }
-        });
+                    if(Cookies.get('ibSiteTrack')!=undefined)
+                    {
+                          console.log("Welcome back! Your last visit was: " + Cookies.get('ibSiteTrack'));
+                          var dateTime = new Date(); dateTime.toUTCString()
+
+                       Cookies.set('ibSiteTrack', dateTime.toUTCString());
+                    }
+                    else
+                    {
+                        var showMe = document.getElementById('cookiemodal');
+                        showMe.style.display = "Block";
+
+                       console.log("Welcome, I see it's your first time here!. Hope you enjoy your stay!");
+                       console.log("cookie before set:*"  + Cookies.get('ibSiteTrack') + "*");
+                       var dateTime = new Date(); dateTime.toUTCString()
+
+                       Cookies.set('ibSiteTrack', dateTime.toUTCString());
+                       console.log("cookie after set:*"  + Cookies.get('ibSiteTrack') + "*");                                                  
+                    }
+                });
         </script>
 
 
@@ -47,6 +60,16 @@
             </div>
         </div>
         <img id = "down" src = "img/down-arrow.png" onclick = "toProjects()"/>
+
+        <div id="cookiemodal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This site uses cookies to improve your browsing experience!</p>
+            <h6>Continued use of this site constitues acceptance</h6>
+          </div>
+        </div>
+
         <div class = "group2">
             <a name = "projects"></a>
             <h1 id = "projects"> Projects </h1>
@@ -156,12 +179,12 @@
                             </div>
                         </td> 
 
-                        <!--<td>
+                        <td>
                             <div class = "p-items">
-                                <img src = "img/php.png">
-                                <p> PHP </p>
+                                <img src = "img/javascript.png" width="60" height="60">
+                                <p> Javascript </p>
                             </div>
-                        </td>-->
+                        </td>
 
                     </tr>
                 </tbody>
@@ -209,10 +232,9 @@
 
 
   <footer>
-      <div class = "fsec1">
-
-         
-          <p id = "creator"> Website Created By Ian Bennett </p>
+      <div class = "fsec1 desktop-footer" id="desktop-footer1">
+  
+          <p class = "creator"> Website Created By Ian Bennett </p>
           &nbsp;
           <p> <u> Icons From Flaticon.com </u> </p>
           <p> <a href = "https://www.freepik.com/"> Freepix </a> -
@@ -220,6 +242,21 @@
           <a href = "https://www.flaticon.com/authors/prosymbols"> Prosymbols </a> </p>
           &nbsp;
           <p> Copyright Ian Bennett 2017 - 2018</p>
+      </div>
+      
+      <div class = "fsec1 mobile-footer" id="mobile-footer1">
+          <p class = "creator"> Website Created By </p>
+          <p class = "creator"> Ian Bennett </p>
+          &nbsp;
+          <p> <u> Icons From Flaticon.com </u> </p>
+          <p> <a href = "https://www.freepik.com/"> Freepix </a> </p>
+          
+          <p><a href = "https://smashicons.com/"> Smashicons </a> </p>
+          
+          <p><a href = "https://www.flaticon.com/authors/prosymbols"> Prosymbols </a> </p>
+          &nbsp;
+          <p> Copyright Ian Bennett</p>
+          <p> 2017 - 2018</p>
       </div>
   </footer>
 
