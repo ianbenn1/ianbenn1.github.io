@@ -22,6 +22,20 @@
                 document.getElementById("image-dl-ul").style.display = "none";
                 document.getElementById("file-dl-ul").style.display = "block";
             }
+
+             if( navigator.userAgent.match(/Android/i)
+                         || navigator.userAgent.match(/webOS/i)
+                         || navigator.userAgent.match(/iPhone/i)
+                         || navigator.userAgent.match(/iPad/i)
+                         || navigator.userAgent.match(/iPod/i)
+                         || navigator.userAgent.match(/BlackBerry/i)
+                         || navigator.userAgent.match(/Windows Phone/i)
+                         ){
+                            document.getElementById("sms-share").style.display = "block";
+                          }
+                         else {
+                            //user is most likely on desktop os.
+                          }
         </script>
 
     <body style = "background-color: rgb(120, 46, 57);">
@@ -41,6 +55,12 @@
           <div class="ssmodal-content">
             <span class="close">&times;</span>
             <p>Social Share</p>
+            <img id = "facebook-share" src = "img/facebook-share.png" width="60" height="60" onclick = "openPopup('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.ianbennett.me')"/>
+            <img id = "twitter-share" src = "img/twitter-share.png" width="60" height="60" onclick = "openPopup('https://twitter.com/intent/tweet?text=Ian+Bennett+is+a+Computer+Science+student+studying+at+the+University+of+Guelph.+Check+out+his+website%21+http%3A%2F%2Fwww.ianbennett.me')"/>
+                <a href = "mailto:?subject=Ian Bennett's website&body=Ian Bennett is a Computer Science student studying at the University of Guelph. Check out his website! http%3A%2F%2Fwww.ianbennett.me"><img id = "email-share" src = "img/email-share.png" width="60" height="60"/></a>
+            
+            <!--Mobile only-->
+            <a href = "sms:&body=Check out Ian Bennett's website! http%3A%2F%2Fwww.ianbennett.me"> <img id = "sms-share" src = "img/sms-share.png" width="60" height="60" style = "display: none;"/></a>
           </div>
         </div>
 
