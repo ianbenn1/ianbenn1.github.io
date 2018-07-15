@@ -1,3 +1,37 @@
+/*Header Start*/
+.header {
+  overflow: hidden;
+  background-color: #35373D;
+  padding: 5px 10px;
+}
+
+.header a {
+  float: left;
+  color: #D0D0D0;
+  text-shadow: 1px 1px #77a7d6;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a:hover {
+  background-color: #848894;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+/*Header End*/
+
 
 #down {
     /*position: absolute;*/
@@ -44,7 +78,7 @@
     color: white;
     text-align:center;
 
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 8%;
     overflow: hidden;
 }
@@ -246,6 +280,29 @@ table.test {
     width: 80%;
 }
 
+.ssmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.ssmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
 /* The Close Button */
 .close {
     color: #aaaaaa;
@@ -280,7 +337,7 @@ table.test {
 }
 
 .descrip-box h3 {
-    color: #D0D0D0;
+    color: #A0A0A0;
     font-size: 32px;
 }
 /*Downloads page end*/

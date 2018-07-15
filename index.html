@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel = "icon" href = "favicon.ico" type = "image/gif"/>
+        <link rel = "icon" href = "favicon.ico" type="image/x-icon"/>
         <meta name = "description" content = "Ian Bennett is a Computer Scientist studying at the University of Guelph.">
         <meta name = "keywords" content = "Ian Bennett, Programmer, Computer Science, University of Guelph, Software Engineering">
         <meta name = "author" content = "Ian Bennett">
@@ -42,6 +42,23 @@
                         var dateTime = new Date();
                         Cookies.set('ibSiteTrack', dateTime.toUTCString());                                                
                     }
+
+                    //Check if user is on mobile browser. For now, show sms share. In future, remove top menubar
+                         if( navigator.userAgent.match(/Android/i)
+                         || navigator.userAgent.match(/webOS/i)
+                         || navigator.userAgent.match(/iPhone/i)
+                         || navigator.userAgent.match(/iPad/i)
+                         || navigator.userAgent.match(/iPod/i)
+                         || navigator.userAgent.match(/BlackBerry/i)
+                         || navigator.userAgent.match(/Windows Phone/i)
+                         ){
+                            document.getElementById("sms-share").style.display = "block";
+                          }
+                         else {
+                            //user is most likely on desktop os.
+                          }
+                    
+
                 });
         </script>
 
@@ -51,6 +68,34 @@
 
 
     <body style = "background-color: rgb(120, 46, 57);">
+        <!--Header Start-->
+        <div class="header">
+<a class="active">Home</a>
+    <a href="/downloads.html">Downloads</a>
+  <div class="header-right">
+    <a href="https://github.com/ianbenn1">Github</a>
+    <a onclick = "document.getElementById('sharemodal').style.display = 'Block';">Share</a>
+  </div>
+</div>
+
+        <!--share header-->
+        <div id="sharemodal" class="ssmodal">
+          <!-- Modal content -->
+          <div class="ssmodal-content">
+            <span class="close">&times;</span>
+            <p>Social Share</p>
+            <img id = "facebook-share" src = "img/facebook-share.png" width="60" height="60" onclick = "openPopup('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.ianbennett.me')"/>
+            <img id = "twitter-share" src = "img/twitter-share.png" width="60" height="60" onclick = "openPopup('https://twitter.com/intent/tweet?text=Ian+Bennett+is+a+Computer+Science+student+studying+at+the+University+of+Guelph.+Check+out+his+website%21+http%3A%2F%2Fwww.ianbennett.me')"/>
+                <a href = "mailto:?subject=Ian Bennett's website&body=Ian Bennett is a Computer Science student studying at the University of Guelph. Check out his website! http%3A%2F%2Fwww.ianbennett.me"><img id = "email-share" src = "img/email-share.png" width="60" height="60"/></a>
+            
+            <!--Mobile only-->
+            <a href = "sms:body=Check out Ian Bennett's website! http%3A%2F%2Fwww.ianbennett.me"> <img id = "sms-share" src = "img/sms-share.png" width="60" height="60" style = "display: none;"/></a>
+          </div>
+        </div>
+
+        <!--Header end-->
+
+
         <div class = "group">
             <div class = "main">
                 <h1 id = "name"> Ian Bennett </h1>
