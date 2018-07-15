@@ -2,14 +2,30 @@
 <html>
     <head>
 		<link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans:600|Open+Sans+Condensed:300" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     	</head>
 
+        <script>
+            function showImageDescrip() {
+                document.getElementById("file-description").style.display = "none";
+                document.getElementById("image-description").style.display = "block";
+                document.getElementById("image-dl-ul").style.display = "block";
+                document.getElementById("file-dl-ul").style.display = "none";
+            }
+            function showFileDescrip() {
+                document.getElementById("file-description").style.display = "block";
+                document.getElementById("image-description").style.display = "none";
+                document.getElementById("image-dl-ul").style.display = "none";
+                document.getElementById("file-dl-ul").style.display = "block";
+            }
+        </script>
 
     <body style = "background-color: rgb(120, 46, 57);">
-    	<div class = "group4">
-            <div class = "classhead" style = "background-color: ">
-                <h1 id = "proj"> Ian Bennett </h1>
-                <h3 id = "desc">Programmer and Computer Enthusiast</h3>
+    	<div class = "group" style="margin-top: 6%;">
+            <div class = "main">
+                <h1 id = "name" style="font-size: 90px;"> Ian Bennett </h1>
+                <h3 id = "description">Programmer and Computer Enthusiast</h3>
             </div>
 
 <table class = "test" style="height: 300px; width: 600px; margin-left: auto; margin-right: auto;" cellpadding="20" cellspacing = "20">
@@ -17,22 +33,42 @@
                     <tr>
 
                         <td>
-                            <div class = "p-items">
+                            <div class = "p-items" id = "file-dl" onmouseover="showFileDescrip()">
                                 <p onclick = "window.open('https://github.com/ianbenn1/personal-projects/blob/master/windowsFileMaker/fileMaker.exe?raw=true');"> Download Windows File Creator </p>
                                 <img src = "img/file.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/personal-projects/blob/master/windowsFileMaker/fileMaker.exe?raw=true');">
+                                <hr id = "file-dl-ul">
                             </div>
 
                         </td>
 
                         <td>
-                            <div class = "p-items">
+                            <div class = "p-items" id = "image-dl" onmouseover="showImageDescrip()">
                                 <p onclick = "window.open('https://github.com/ianbenn1/personal-projects/blob/master/Bing_Background_Scraper/BingBackgroundScraper.exe?raw=true');"> Download Image Web Scraper </p>
                                 <img src = "img/webScrape.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/personal-projects/blob/master/Bing_Background_Scraper/BingBackgroundScraper.exe?raw=true');">
-
+                                <hr id = "image-dl-ul" style = "display: none;">
                             </div>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div id = "file-description" class = "main descrip-box" >
+                <h3> Windows Command Line File Creator</h3>
+                <!-- line break right here -->
+                <p>  In Linux based operating systems, creating a new file of any type is as simple as right clicking and
+                    naming your file. On windows, its a more irritating process. I decided to simplify file creation on
+                    windows. This is a python program that simply prompts a user for a file name/path and creates it
+                    exactly as entered. This project was made much more for my own satisfaction than for learning a
+                    language or demopnstrating skill.</p>
+            </div>
+            <div id = "image-description" class = "main descrip-box" style="display: none;" >
+                <h3> Bing Canada Background Scraper</h3>
+                <!-- line break right here -->
+                <p>  This program is a simple application for downloading the daily background of Bing Canada.
+                    I found it difficult to manually download the backgrounds from bing, as the links are deeply burried
+                    in the html. Because of this I decided to write a program to do this for me. The program opens a Bing control page XML and scrapes it for the URL
+                    tag. It then coppies the following line and downloads the picture at that address as a .jpg file labeled
+                    by date. It currently accesses only the Canadian Bing page, as that is my nationality, but this is
+                    simply altered by changing the market (mkt) tag in the XML page url.</p>
+            </div>
 
     </body>

@@ -10,17 +10,15 @@
 #name {
 
     text-shadow: 2px 2px white;
-    /*padding-top: 10%;*/
-    font-size: 150px;
-    font-family: 'Bungee', cursive;/*'Open Sans', sans-serif;Impact, Charcoal, sans-serif;*/
+    font-size: 125px;
+    font-family: 'Bungee', cursive;
     color: #77a7d6;
 }
 
 #description {
     padding-top: 0%;
-    /*padding-bottom: 15%;*/
-    font-size: 35px; /*25px;*/
-    font-family: 'Open Sans Condensed', sans-serif;/*'Open Sans', sans-serif;*/
+    font-size: 35px; 
+    font-family: 'Open Sans Condensed', sans-serif;
     text-shadow: 1px 1px #77a7d6;
 
 }
@@ -48,13 +46,7 @@
 
     margin-top: 10%;
     margin-bottom: 8%;
-
-    /*padding-bottom: 15%;*/
-    /*border-bottom: 4px solid white;*/
-    /*line-height: 20px;*/
     overflow: hidden;
-    /*padding-top: 5%;*/
-    /*padding-bottom: 5%;*/
 }
 
 .group2 {
@@ -280,3 +272,15 @@ table.test {
         display: none;
     }
 }
+
+/*Downloads page*/
+.descrip-box {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.descrip-box h3 {
+    color: #D0D0D0;
+    font-size: 32px;
+}
+/*Downloads page end*/
