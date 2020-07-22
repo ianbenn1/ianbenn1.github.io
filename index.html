@@ -1,305 +1,186 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <link rel = "icon" href = "favicon.ico" type="image/x-icon"/>
-        <meta name = "description" content = "Ian Bennett is a Computer Scientist studying at the University of Guelph.">
-        <meta name = "keywords" content = "Ian Bennett, Programmer, Computer Science, University of Guelph, Software Engineering">
-        <meta name = "author" content = "Ian Bennett">
-        <meta name = "copyright" content = "© Ian Bennett 2017-2018">
-        <!--<meta name = "viewport" content="width=device-width,initial-scale=1.0">-->
-        <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans:600|Open+Sans+Condensed:300" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/cookies.js"></script>
-        <script type="text/javascript" src="js/modal.js"></script>
-        <script>
-            function toProjects()
-            {
-                $('html, body').animate({scrollTop: $("#projects").offset().top},'slow');
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Bennett</title>
+    <!--Resources:-->
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="page">
+        <div class="main-content">
+            <div class="header">
+                <h1>Ian Bennett</h1>
+                <h6>Code Cars Coffee Canines <span class="cursor">|</span></h6>
+            </div>
+            <div class="heroimg">
+                <div class="heroimg-content">
+                    <h1>Hi, I'm Ian</h1>
+                    <h5>I'm a computer science student at the University of Guelph, an enthusiastic programmer, a dog owner, a coffee lover, and a car guy<span class="descrip-period">.</span><span class="hover">I write in all caps too</span></h5>
+                    <div class="socials">
+                        <img class="github" src="/assets/img/GitHub-Mark-120px-plus.png" alt="Visit my Github" width="120px"/>
+                        <img class="linkedin" src="/assets/img/LI-In-Bug.png" alt="Visit my LinkedIn" width="120px"/>
+                        <img class="instagram" src="/assets/img/instagram-glyph-logo_May2016.png" alt="Visit my Instagram" width="120px"/>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content-text">
+                <div class="content-header status-header">What am I up to now?</div>
+                <div class="content-text status-update">I'm currently working a coop term at Manulife Financial as a Full Stack Engineer and preparing for the final semester of my degree amidst a pandemic. It's been interesting!</div>
+                <div class="content-header project-header">Some of my projects</div>
+                <!--***Desktop Slider***-->
+                <!-- Slider main container -->
+                <div class="swiper-container project-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide widescreen-slide">
+                            <div class="slide-1-container slide-container">
+                                <img src="assets/img/specialdelivery.png" alt="Drag and Drop File Program Window open" />
+                                <div class="text-container">
+                                    <a href="https://github.com/ianbenn1/SpecialDelivery"><span>SpecialDelivery <span class="nav-arrow">↗</span></span></a>
+                                    <p>SpecialDelivery is a drag and drop, copy and paste file transfer program. It can send files to any device on your local network fast. Send photos from your Desktop to your iPhone in one step. </p>    
+                                    <p>SpecialDelivery is built using Electron and NodeJS Express</p>
+                                    <p>SpecialDelivery isn't quite ready for production yet, but when it is, it'll be here first</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide widescreen-slide">
+                            <div class="slide-2-container slide-container">
+                                <img src="assets/img/EGS1.PNG" alt="Top Down Animated Golf App Home screen" />
+                                <img src="assets/img/EGS2.PNG" alt="Golf course level 1" />
+                                <img src="assets/img/EGS3.PNG" alt="Level victory card" />
+                                <div class="text-container">
+                                    <a href="https://github.com/ianbenn1/Eddies-Golf-Simulator"><span>Eddies Golf Simulator <span class="nav-arrow">↗</span></span></a>
+                                    <p>Eddies Golf Simulator is a top down animated mobile golf game</p>    
+                                    <p>Originally developed for a University mobile development course, Eddies Golf Sim is a casual golfing app for people who like customization</p>
+                                    <p>Eddies Golf Simulator is made with React Native and Matter.js</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide widescreen-slide">
+                            <div class="slide-3-container slide-container">
+                                <img class="bing-daily-image" src="/assets/img/splashscreen.jpg" alt="Sample Bing Background">
+                                <div class="text-container">
+                                    <a href="https://github.com/ianbenn1/personal-projects/tree/master/Bing_Background_Scraper"><span>Bing Image Scraper <span class="nav-arrow">↗</span></span></a>
+                                    <p>The search engine Bing has a new high quality background image each day</p>    
+                                    <p>This program can run on startup and save the most recent Bing image in your wallpapers folder, so you always have fresh background images</p>
+                                    <p>Bing background scraper is made in Python</p>
+                                </div>
+                            </div>
+                        </div>
+                        ...
+                    </div>
+                    <div class="swiper-pagination"></div>
                 
-            }
-        </script>
-        <script>
-                $( document ).ready(function() {
-
-                    if(Cookies.get('ibSiteTrack')!=undefined)
-                    {
-                          console.log("Welcome back! Your last visit was: " + Cookies.get('ibSiteTrack'));
-                          var dateTime = new Date(); dateTime.toUTCString()
-
-                       Cookies.set('ibSiteTrack', dateTime.toUTCString());
-                    }
-                    else
-                    {
-                        var showMe = document.getElementById('cookiemodal');
-                        showMe.style.display = "Block";
-
-                        console.log("Welcome, I see it's your first time here!. Hope you enjoy your stay!");
-                        var dateTime = new Date();
-                        Cookies.set('ibSiteTrack', dateTime.toUTCString());                                                
-                    }
-
-                    //Check if user is on mobile browser. For now, show sms share. In future, remove top menubar
-                         if( navigator.userAgent.match(/Android/i)
-                         || navigator.userAgent.match(/webOS/i)
-                         || navigator.userAgent.match(/iPhone/i)
-                         || navigator.userAgent.match(/iPad/i)
-                         || navigator.userAgent.match(/iPod/i)
-                         || navigator.userAgent.match(/BlackBerry/i)
-                         || navigator.userAgent.match(/Windows Phone/i)
-                         ){
-                            document.getElementById("sms-share").style.display = " ";
-                          }
-                         else {
-                            //user is most likely on desktop os.
-                          }
-                    
-
-                });
-        </script>
-
-
-        <title>Ian Bennett</title>
-    </head>
-
-
-    <body style = "background-color: rgb(120, 46, 57);">
-        <!--Header Start-->
-        <div class="header">
-<a class="active">Home</a>
-    <a href="/downloads.html">Downloads</a>
-  <div class="header-right">
-    <a href="https://github.com/ianbenn1">Github</a>
-    <a onclick = "document.getElementById('sharemodal').style.display = 'Block';">Share</a>
-  </div>
-</div>
-
-        <!--share header-->
-        <div id="sharemodal" class="ssmodal">
-          <!-- Modal content -->
-          <div class="ssmodal-content">
-            <span class="close">&times;</span>
-            <p>Social Share</p>
-            <img id = "facebook-share" src = "img/facebook-share.png" width="60" height="60" onclick = "openPopup('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.ianbennett.me')"/>
-            <img id = "twitter-share" src = "img/twitter-share.png" width="60" height="60" onclick = "openPopup('https://twitter.com/intent/tweet?text=Ian+Bennett+is+a+Computer+Science+student+studying+at+the+University+of+Guelph.+Check+out+his+website%21+http%3A%2F%2Fwww.ianbennett.me')"/>
-                <a href = "mailto:?subject=Ian Bennett's website&body=Ian Bennett is a Computer Science student studying at the University of Guelph. Check out his website! http%3A%2F%2Fwww.ianbennett.me"><img id = "email-share" src = "img/email-share.png" width="60" height="60"/></a>
-            
-            <!--Mobile only-->
-            <a href = "sms:&body=Check out Ian Bennett's website! http%3A%2F%2Fwww.ianbennett.me"> <img id = "sms-share" src = "img/sms-share.png" width="60" height="60" style = "display: none;"/></a>
-          </div>
-        </div>
-
-        <!--Header end-->
-
-
-        <div class = "group">
-            <div class = "main">
-                <h1 id = "name"> Ian Bennett </h1>
-                <h3 id = "description">Programmer and Computer Enthusiast</h3>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!--***End Desktop Slider***-->
+                <!--***Mobile Slider***-->
+                <!-- Slider main container -->
+                <div class="swiper-container-mobile project-container" style="display: none;">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="mtc">
+                                <div class="mtc-img">
+                                    <img src="assets/img/specialdelivery.png" alt="Drag and Drop File Program Window open" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="mtc">
+                                <a href="https://github.com/ianbenn1/SpecialDelivery"><span>SpecialDelivery </span></a><span class="nav-arrow">↗</span>
+                                <p>SpecialDelivery is a drag and drop, copy and paste file transfer program. It can send files to any device on your local network fast. Send photos from your Desktop to your iPhone in one step. </p>    
+                                <p>SpecialDelivery is built using Electron and NodeJS Express</p>
+                                <p>SpecialDelivery isn't quite ready for production yet, but when it is, it'll be here first</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="mtc">
+                                <div class="mtc-img">
+                                    <img class="mtc-multi-img" src="assets/img/EGS2.PNG" alt="Golf course level 1" />
+                                    <img class="mtc-multi-img" src="assets/img/EGS3.PNG" alt="Level victory card" />
+                                    <img class="mtc-multi-img" src="assets/img/EGS1.PNG" alt="Top Down Animated Golf App Home screen" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="mtc">
+                                <a href="https://github.com/ianbenn1/Eddies-Golf-Simulator"><span>Eddies Golf Simulator </span></a><span class="nav-arrow">↗</span>
+                                <p>Eddies Golf Simulator is a top down animated mobile golf game</p>    
+                                <p>Originally developed for a University mobile development course, Eddies Golf Sim is a casual golfing app for people who like customization</p>
+                                <p>Eddies Golf Simulator is made with React Native and Matter.js</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mtc">
+                            <div class="mtc">
+                                <div class="mtc-img">
+                                    <img src="/assets/img/splashscreen.jpg" alt="Sample Bing Background">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class=" mtc">
+                                <a href="https://github.com/ianbenn1/personal-projects/tree/master/Bing_Background_Scraper"><span>Bing Image Scraper </span></a><span class="nav-arrow">↗</span>
+                                <p>The search engine Bing has a new high quality background image each day</p>    
+                                <p>This program can run on startup and save the most recent Bing image in your wallpapers folder, so you always have fresh background images</p>
+                                <p>Bing background scraper is made in Python</p>
+                            </div>
+                        </div>
+                        ...
+                    </div>
+                    <div class="swiper-pagination-mobile"></div>
+                
+                    <div class="swiper-button-prev-mobile"><</div>
+                    <div class="swiper-button-next-mobile">></div>
+                </div>
+                <!--***End mobile slider***-->
+                <div class="content-header">Skills and Technologies</div>
+                <div class="content-text">Full Stack Web Development - Scripting Languages - Parsers - Agile development - Rapid Prototyping - Legacy Programming</div>
+                <div class="content-text">React - Redux - NodeJS - React Native - Android Java</div>
+                <div class="content-text">JavaScript (ES6) - Python - C - Java - HTML5/CSS3/SASS - Perl - Ruby - C# - PostgreSQL - R - M68000</div>
+            </div>
+            <div class="contact">
+                <span>You can reach me through LinkedIn, or by sending an <a href="mailto:bennetti@uoguelph.ca">email here</a></span>
+            </div>
+            <div class="footer">
+                <h6>&trade; Ian Bennett 2017 - 2020</h6>
+                <p class="disclaimer">All photographs displayed on this website with the exception of brand logos, and where specified are the sole property of and were created by Ian Bennett.</p>
+                <p class="disclaimer">Contact for usage.</p>
+                <div class="attribution">
+                    <div class="attribution-box">
+                        <a href="https://github.com/theleagueof/ostrich-sans">Font</a>
+                        <img src="/assets/font/images/ostrich-sans-1.jpeg" width=100 alt="Ostrich Sans" />
+                    </div>
+                    <div class="attribution-box">
+                        <a href="https://github.com/nolimits4web/swiper">Touch Slider</a>
+                        <div class="swiper-logo"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <img id = "down" src = "img/down-arrow.png" onclick = "toProjects()"/>
-
-        <div id="cookiemodal" class="modal">
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>This site uses cookies to improve your browsing experience!</p>
-            <h6>Continued use of this site constitues acceptance</h6>
-          </div>
-        </div>
-
-        <div class = "group2">
-            <a name = "projects"></a>
-            <h1 id = "projects"> Projects </h1>
-            <table class = "test" style="height: 300px; width: 600px; margin-left: auto; margin-right: auto;" cellpadding="20" cellspacing = "20">
-                <tbody>
-                    <tr>
-
-                        <td>
-                            <div class = "p-items">
-                                <p onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/windowsFileMaker');"> Windows File Creator </p>
-                                <img src = "img/file.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/windowsFileMaker');">
-                            </div>
-
-                        </td>
-
-                        <td>
-                            <div class = "p-items">
-                                <p onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/Bing_Background_Scraper');"> Image Web Scraper </p>
-                                <img src = "img/webScrape.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/Bing_Background_Scraper');">
-
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class = "p-items">
-                                <p onclick = "window.open('https://chrome.google.com/webstore/detail/flickur-image-scraper/nafeobijolhocicekaehgbhgdgcojcaf');"> FlickUR Chrome Extension </p>
-                                <img src = "img/flickr.png" width="60" height="60" onclick = "window.open('https://chrome.google.com/webstore/detail/flickur-image-scraper/nafeobijolhocicekaehgbhgdgcojcaf');">
-
-                            </div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class = "p-items">
-                                <p onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/DiscordBot');"> Discord Bot </p>
-                                <img src = "img/discord.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/personal-projects/tree/master/DiscordBot');">
-                            </div>
-                        </td>
-                        <td>
-                            <div class = "p-items">
-                                <p onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');"> Code for this website</p>
-                                <img src = "img/websiteCode.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');">
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class = "p-items">
-                                <p onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');"> Spell Checker using hash table </p>
-                                <img src = "img/spellCheck.png" width="60" height="60" onclick = "window.open('https://github.com/ianbenn1/ianbenn1.github.io');">
-                            </div>
-                        </td>
-
-                        
-                    </tr>
-                </tbody>
-            </table>
-
-            <!--<h3 onclick = "window.open('https://ianbennett.me/downloads.html);"> Downloads </h3>-->
-            <a class="downloadlinks" href="downloads.html" style= "color: white; font-family: 'Open Sans Condensed', sans-serif; font-size: 22px;">Downloads</a>
-        </div>
-
-        <div class = "group3">
-
-            <a name = "skills"></a>
-            <h1 id = "skills"> Skills </h1>
-            <h3 class = "skill-title"> <u> Languages </u> </h3>
-            <table class = "test" style="height: 100px; width: 600px; margin-left: auto; margin-right: auto;" cellpadding="20" cellspacing = "20">
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class = "p-items">
-
-                                <img src = "img/python.png" width="60" height="60">
-                                <p> Python </p>
-
-                            </div>
-                        </td>
-                        <td>
-                            <div class = "p-items">
-                                <img src = "img/java.png" width="60" height="60">
-                                <p> Java </p>
-
-                            </div>
-                        </td>
-                        <td>
-                            <div class = "p-items">
-                                <img src = "img/html.png" width="60" height="60">
-                                <p> HTML/CSS </p>
-
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class = "p-items">
-
-                                <img src = "img/c-logo.png" width="60" height="60">
-                                <p> C/C# </p>
-                            </div>
-
-                        </td>
-
-                        <td>
-                            <div class = "p-items">
-                                <img src = "img/perl.png" width="60" height="60">
-                                <p> Perl </p>
-                            </div>
-                        </td> 
-
-                        <td>
-                            <div class = "p-items">
-                                <img src = "img/javascript.png" width="60" height="60">
-                                <p> Javascript </p>
-                            </div>
-                        </td>
-
-                    </tr>
-                </tbody>
-            </table>
-
-            <!--Platforms !-->
-
-            <h3 class = "skill-title"> <u> Platforms </u> </h3>
-            <table class = "test" style="height: 100px; width: 600px; margin-left: auto; margin-right: auto;" cellpadding="20" cellspacing = "20">
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class = "p-items">
-
-                                <img src = "img/apple.png" width="60" height="60">
-                                <p> Macintosh </p>
-
-                            </div>
-                        </td>
-                        <td>
-                            <div class = "p-items">
-                                <img src = "img/windows.png" width="60" height="60">
-                                <p> Windows </p>
-
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class = "p-items">
-
-                                <img src = "img/linux.png" width="60" height="60">
-                                <p> Linux </p>
-                            </div>
-
-                        </td>
-
-                    </tr>
-                </tbody>
-            </table>
-            <form method = "post" action = "mailto:bennetti@uoguelph.ca">
-                <button class = "btn" type = "submit"> Contact Me </button>
-            </form>
-        </div>
-  </body>
-
-
-  <footer>
-      <div class = "fsec1 desktop-footer" id="desktop-footer1">
-  
-          <p class = "creator"> Website Created By Ian Bennett </p>
-          &nbsp;
-          <p> <u> Icons From Flaticon.com </u> </p>
-          <p> <a href = "https://www.freepik.com/"> Freepix </a> -
-          <a href = "https://smashicons.com/"> Smashicons </a> -
-          <a href = "https://www.flaticon.com/authors/prosymbols"> Prosymbols </a> </p>
-          &nbsp;
-          <p> Copyright Ian Bennett 2017 - 2018</p>
-      </div>
-      
-      <div class = "fsec1 mobile-footer" id="mobile-footer1">
-          <p class = "creator"> Website Created By </p>
-          <p class = "creator"> Ian Bennett </p>
-          &nbsp;
-          <p> <u> Icons From Flaticon.com </u> </p>
-          <p> <a href = "https://www.freepik.com/"> Freepix </a> </p>
-          
-          <p><a href = "https://smashicons.com/"> Smashicons </a> </p>
-          
-          <p><a href = "https://www.flaticon.com/authors/prosymbols"> Prosymbols </a> </p>
-          &nbsp;
-          <p> Copyright Ian Bennett</p>
-          <p> 2017 - 2018</p>
-      </div>
-  </footer>
-
+    </div>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/scripts/home.min.js"></script>
 </html>
+
+
+
+
+<!--
+    DONE- Changing backgrounds based on time
+        - Change backgrounds based on vp width!!!!
+    DONE- Hover period says I also write in all caps
+    - Change gearhead to petrolhead if ip is in europe
+    DONE- on hover of the socials, change the gradiant of the social background div to peak under the selected div
+    - Weather
+    DONE- Flashy cursor in the 'code car coffee canines' that when you click, you can edit
+    - Easter egg in console
+    - spotify programming playlist
+-->
