@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: -65px;
     height: 90vh;
     border: 1px solid #eaeaea;
-    background-image: url(/assets/img/bg_main_day_crop4.jpg);
+    background-image: url(/assets/img/bg_main_day_lq.webp);
     background-size: cover;
 }
 
@@ -91,16 +91,14 @@ h1, h2, h3, h4, h5, h6, p {
     color: white;
     font-family: "Ostrich-Sans-Rounded";
     font-weight: 1000;
-    /*-webkit-text-stroke: 3px black;*/
     text-shadow: 2px 2px #000;
     margin-bottom: 15px;
-    /*mix-blend-mode: difference;*/
+    font-display: swap;
 }
 
 .heroimg-content h5 {
     font-size: calc(2em + 0.5vw);
     color: white;
-    /*mix-blend-mode: difference;*/
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 10px;
@@ -132,8 +130,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* -- Homepage Text Content -- */
 .main-content-text {
-    background: url(/assets/img/bg_secondary_crop2.jpg) #1D1075;
-    backdrop-filter: blur(2px);
+    background: url(/assets/img/bg_secondary.webp) #1D1075;
     background-size: cover;
     border: 1px solid #fff;
     overflow: hidden;
