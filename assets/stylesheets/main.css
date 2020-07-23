@@ -77,7 +77,9 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: -65px;
     height: 90vh;
     border: 1px solid #eaeaea;
-    background-image: url(/assets/img/bg_main_day_lq.webp);
+    background-image: url(/assets/img/bg_main_day_crop4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -130,7 +132,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* -- Homepage Text Content -- */
 .main-content-text {
-    background: url(/assets/img/bg_secondary.webp) #1D1075;
+    background: url(/assets/img/bg_secondary_crop2.jpg) #1D1075;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid #fff;
     overflow: hidden;
@@ -251,7 +255,6 @@ h1, h2, h3, h4, h5, h6, p {
     object-fit: contain;
     margin: 0 auto;
     height: auto !important;
-    width: 30% !important;
 }
 
 .nav-arrow {
@@ -281,6 +284,14 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: 9;
 }
 
+.slide-container picture {
+    overflow: hidden;
+}
+
+.mtc picture {
+    height: 100%;
+    overflow: hidden;
+}
 /* -- Contact Us --*/
 .contact {
     background-color: #797979;

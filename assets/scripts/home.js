@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //Set background based on local time
     var cur_hr = (new Date()).getHours();
     if (cur_hr >= 17 && cur_hr < 20){ //Evening
-        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve.webp')";
+        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve_crop1.jpg')";
     }
     else if (cur_hr >= 20 || cur_hr < 5) //night
     {
-        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.webp')";
+        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.jpg')";
     }
     else { //day
 
@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     //console.log('https://www.bing.ca' + data.images[0].url)
                 }
                 else {
-                    document.querySelector(".bing-daily-image").src = "/assets/img/splashscreen.webp";
+                    document.querySelector(".bing-daily-image").src = "/assets/img/splashscreen.jpg";
                 }
             });
-        }).catch(document.querySelector(".bing-daily-image").src = "/assets/img/splashscreen.webp");
+        }).catch(document.querySelector(".bing-daily-image").src = "/assets/img/splashscreen.jpg");
 
 
     //Grab visitor IP and aprox location
