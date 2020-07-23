@@ -181,6 +181,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .slide-container img {
     height: 100%;
+    width: 100%;
 }
 .slide-container .text-container {
     display: flex;
@@ -210,6 +211,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .slide-3-container .text-container p {
     font-size: calc(1.25em + 0.4vw);
+}
+.multi-img {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
 }
 .mtc {
     text-align: center;
@@ -286,6 +292,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .slide-container picture {
     overflow: hidden;
+    max-width: 50%;
 }
 
 .mtc picture {

@@ -6,7 +6,7 @@
     <meta name="description" content="Hi, I'm Ian, I'm a computer science student, a car guy, a dog lover and more. Learn a little more about me here.">
     <title>Ian Bennett</title>
     <!--Resources:-->
-    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.0.4/swiper-bundle.min.css">
 </head>
 <body>
@@ -66,21 +66,23 @@
                         </div>
                         <div class="swiper-slide widescreen-slide">
                             <div class="slide-2-container slide-container">
-                                <picture>
-                                    <source srcset="assets/img/EGS1.webp" type="image/webp">
-                                    <source srcset="assets/img/EGS1.PNG" type="image/png">
-                                    <img src="assets/img/EGS1.PNG" alt="Top Down Animated Golf App Home screen" />
-                                </picture>
-                                <picture>
-                                    <source srcset="assets/img/EGS2.webp" type="image/webp">
-                                    <source srcset="assets/img/EGS2.PNG" type="image/png">
-                                    <img src="assets/img/EGS2.PNG" alt="Golf course level 1" />
-                                </picture>
-                                <picture>
-                                    <source srcset="assets/img/EGS3.webp" type="image/webp">
-                                    <source srcset="assets/img/EGS3.PNG" type="image/png">
-                                    <img src="assets/img/EGS3.PNG" alt="Level victory card" />
-                                </picture>
+                                <div class="multi-img">
+                                    <picture>
+                                        <source srcset="assets/img/EGS1.webp" type="image/webp">
+                                        <source srcset="assets/img/EGS1.PNG" type="image/png">
+                                        <img src="assets/img/EGS1.PNG" alt="Top Down Animated Golf App Home screen" />
+                                    </picture>
+                                    <picture>
+                                        <source srcset="assets/img/EGS2.webp" type="image/webp">
+                                        <source srcset="assets/img/EGS2.PNG" type="image/png">
+                                        <img src="assets/img/EGS2.PNG" alt="Golf course level 1" />
+                                    </picture>
+                                    <picture>
+                                        <source srcset="assets/img/EGS3.webp" type="image/webp">
+                                        <source srcset="assets/img/EGS3.PNG" type="image/png">
+                                        <img src="assets/img/EGS3.PNG" alt="Level victory card" />
+                                    </picture>
+                                </div>
                                 <div class="text-container">
                                     <a href="https://github.com/ianbenn1/Eddies-Golf-Simulator"><span>Eddies Golf Simulator <span class="nav-arrow">↗</span></span></a>
                                     <p>Eddies Golf Simulator is a top down animated mobile golf game</p>    
@@ -219,6 +221,6 @@
         </div>
     </div>
     <script src="https://unpkg.com/swiper@6.0.4/swiper-bundle.min.js"></script>
-    <script src="/assets/scripts/home.js"></script>
+    <script src="/assets/scripts/home.min.js"></script>
 </body>
 </html>
