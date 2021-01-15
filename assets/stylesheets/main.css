@@ -272,8 +272,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .swiper-button-prev-mobile {
     float: left;
-    color: white;
-    font-size: 52px;
+    color: rgb(0, 122, 255);
+    font-size: 72px;
     position: relative;
     padding-bottom: 50%;
     margin-top: -25%;
@@ -282,8 +282,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .swiper-button-next-mobile {
     float: right;
-    color: white;
-    font-size: 52px;
+    color: rgb(0, 122, 255);
+    font-size: 72px;
     position: relative;
     padding-bottom: 50%;
     margin-top: -25%;
@@ -341,6 +341,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .attribution {
     margin-top: 35px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
