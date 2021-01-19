@@ -73,11 +73,21 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 /* -- Hero Banner -- */
-.heroimg {
+.no-webp .heroimg {
     margin-top: -65px;
     height: 90vh;
     border: 1px solid #eaeaea;
     background-image: url(/assets/img/bg_main_day_crop4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.webp .heroimg {
+    margin-top: -65px;
+    height: 90vh;
+    border: 1px solid #eaeaea;
+    background-image: url(/assets/img/bg_main_day_lq.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -131,8 +141,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* -- Homepage Text Content -- */
-.main-content-text {
+.no-webp .main-content-text {
     background: url(/assets/img/bg_secondary_crop2.jpg) #1D1075;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.webp .main-content-text {
+    background: url(/assets/img/bg_secondary.webp) #1D1075;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
