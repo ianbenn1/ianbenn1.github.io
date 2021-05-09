@@ -35,6 +35,8 @@ font-family: 'Ostrich-Sans-Rounded';
 
 body {
     background-color: #eaeaea;
+    transform-origin: right;
+    transition: transform .45s;
 }
 h1, h2, h3, h4, h5, h6, p {
     font-family: "Segoe UI", Arial, sans-serif;
@@ -42,6 +44,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .text-shadow-nowebkit {
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.page {
+    transform-origin: right;
+    transition: transform .45s;
 }
 /* -- Header -- */
 
@@ -370,6 +376,11 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column;
 }
 
+/* -- Menu open page body door effect -- */
+.opendoor {
+    transform: perspective(200vw) rotateY(-30deg);
+}
+
 /* -- Media Queries --*/
 /* -- Header -- */
 /* -- Hero banner -- */
@@ -456,8 +467,22 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+@media only screen and (max-height: 832px) and (max-width: 1500px) {
+    .heroimg-content h1 {
+        font-size: calc(4.4em + 0.5vw);
+        margin-bottom: 1px;
+        margin-top: -5px;
+    }
+    .heroimg-content h5 {
+        font-size: calc(1.7em + .5vw);
+        margin-left: 4.5%;
+        margin-right: 4.5%;
+        margin-top: 1px;
+    }
+}
+
 /*Landscape phones*/
-@media only screen and (max-height: 732px) {
+@media only screen and (max-height: 770px) {
     .heroimg-content h1 {
         font-size: calc(4.45em + 0.5vw);
         margin-bottom: 1px;
