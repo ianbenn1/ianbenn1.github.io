@@ -5,38 +5,44 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".header .cursor").style.visibility = ((document.querySelector(".header .cursor").style.visibility != 'visible') ? 'visible' : 'hidden');
     }, 530);
 
-    //Set background based on local time
-    var cur_hr = (new Date()).getHours();
-    if (cur_hr >= 17 && cur_hr < 20){ //Evening
-        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve_crop1.jpg')";
-    }
-    else if (cur_hr >= 20 || cur_hr < 5) //night
-    {
-        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.jpg')";
-    }
-    else { //day
+    (async() => {
 
-    }
+        setTimeout(()=> { //Workaround to make Modernizr reachable
+
+            //Set background based on local time
+            let cur_hr = (new Date()).getHours();
+            if (cur_hr >= 17 && cur_hr < 20) //Evening
+            {
+                console.log("here", document.querySelector("html.webp"))
+                if(Modernizr.webp)
+                {
+                    document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve.webp')";
+                }
+                else {
+                    document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve_crop1.jpg')";
+                }
+            }
+            else if (cur_hr >= 20 || cur_hr < 5) //Night
+            {
+                if(Modernizr.webp)
+                {
+                    document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.webp')";
+                }
+                else {
+                    document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.jpg')";
+                }
+            }
+        }, 0)
+    })();
+
 
     //Check window size for swiper
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     //console.log("Viewport width on load is " + vw);
     swiperMobileArangement(vw);
-
-    //Grab Bing background image
-    fetch("https://cors-anywhere.herokuapp.com/https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-CA")
-        .then(resp => {
-            resp.json().then(data => {
-                if(data.images[0].url !== undefined && data.images[0].url !== null && data.images[0].url.length > 25)
-                {
-                    document.querySelector(".bing-daily-image").src = 'https://www.bing.ca' + data.images[0].url;
-                    //console.log('https://www.bing.ca' + data.images[0].url)
-                }
-                else {
-                    document.querySelector(".bing-daily-image").src = "/assets/img/splashscreen.jpg";
-                }
-            });
-        }).catch(document.querySelector(".bing-daily-image").src = "/assets/img/splashscreen.jpg");
+    
+    //Set menu style
+    toggleMobileMenu();
 
 
     //Grab visitor IP and aprox location
@@ -217,4 +223,45 @@ const swiperMobileArangement = (vw) => {
         mobileSlideSwiper.update();
         //console.log("Changed to desktop slides");
     }
+}
+
+const toggleMobileMenu = () => {
+    // if(window.innerHeight > window.innerWidth)//may need touchup
+    // {//Mobile
+    //     console.log("Menu considers this mobile");
+    //     document.querySelector(".desktop-menu").hidden = true;
+    //     document.querySelector(".mobile-menu").hidden = false;
+    // }
+    // else {//DT
+    //     console.log("Menu considers this desktop");
+    //     document.querySelector(".mobile-menu").hidden = true;
+    //     document.querySelector(".desktop-menu").hidden = false;
+    // }
+}
+
+function openmenudoor() {
+
+    let menuClassName = "";
+
+    if(window.innerHeight > window.innerWidth)//may need touchup
+    {//Mobile
+        menuClassName = ".mobile-menu";
+    }
+    else {//DT
+        menuClassName = ".desktop-menu";
+    }
+
+
+    document.querySelector(".page").classList.toggle("opendoor");
+    document.querySelector("html").classList.toggle("menu-open");
+    document.querySelector("body").classList.toggle("menu-open");
+    let button = document.querySelector(".menu-button");
+    if(button.textContent == "Menu") {
+        button.textContent = "Close";
+        document.querySelector(menuClassName).hidden = false
+    } else {
+        button.textContent = "Menu";
+        document.querySelector(menuClassName).hidden = true;
+     }
+
 }

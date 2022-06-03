@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta name="description" content="Hi, I'm Ian, I'm a computer science student, a car guy, a dog lover and more. Learn a little more about me here.">
+    <title>Ian Bennett | Photos</title>
+    <!--Resources:-->
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/altpages.css">
+</head>
+<body>
+    <div style="position: absolute; z-index: 0;" class="menu">
+        <div class="mobile-menu" hidden>
+            <div class="top">
+                <p onclick="window.location = '/'">Home</p>
+                <p onclick="window.location = '/about'">About me</p>
+            </div>
+            <div class="bottom">
+                <p onclick="window.location = '/photos'">Photos</p>
+                <p onclick="window.location = '/articles'">Articles</p>
+            </div>
+        </div>
+        <div class="desktop-menu" hidden>
+            <p onclick="window.location = '/'">Home</p>
+            <p onclick="window.location = '/photos'">Photos</p>
+            <p onclick="window.location = '/articles'">Articles</p>
+            <p onclick="window.location = '/about'">About me</p>
+        </div>
+
+    </div>
+    <div class="page">
+        <button style="position: absolute; z-index: 9;" onclick="openmenudoor()" class="menu-button">Menu</button>
+        <div class="main-content">
+            <div class="header">
+                <h1>Ian Bennett</h1>
+                <h6>Code Cars Coffee Canines <span class="cursor">|</span></h6>
+            </div>
+            <div class="heroimg">
+                <div class="heroimg-content">
+                    <h1>Photos</h1>
+                    <h5>Taken by me. Available for download and use where attributed</h5>
+                </div>
+            </div>
+            <div class="contact" id="contactme">
+                <span>You can reach me through <a href="#social-anchor">LinkedIn</a>, or by sending an <a href="mailto:webinquiries@ianbennett.me">email here</a></span>
+            </div>
+            <div class="footer">
+                <h6>&trade; Ian Bennett 2017 - 2021</h6>
+                <p class="disclaimer">All photographs displayed on this website with the exception of brand logos, and where specified are the sole property of and were created by Ian Bennett.</p>
+                <p class="disclaimer">Contact for usage.</p>
+                <div class="attribution">
+                    <div class="attribution-box">
+                        <a href="https://github.com/theleagueof/ostrich-sans">Font</a>
+                        <img src="/assets/font/images/ostrich-sans-1-lq.jpeg" width=100 alt="Ostrich Sans" loading="lazy"/>
+                    </div>
+                    <div class="attribution-box">
+                        <a href="https://github.com/nolimits4web/swiper">Touch Slider</a>
+                        <div class="swiper-logo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/scripts/modernizr-webp-detect.js"></script>
+    <script src="/assets/scripts/altpages.js"></script>
+</body>
+</html>

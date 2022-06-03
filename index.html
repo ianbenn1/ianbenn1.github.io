@@ -7,11 +7,31 @@
     <meta name="description" content="Hi, I'm Ian, I'm a computer science student, a car guy, a dog lover and more. Learn a little more about me here.">
     <title>Ian Bennett</title>
     <!--Resources:-->
-    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.0.4/swiper-bundle.min.css">
 </head>
 <body>
+    <div style="position: absolute; z-index: 0;" class="menu">
+        <div class="mobile-menu" hidden>
+            <div class="top">
+                <p onclick="window.location = '/software'">Software</p>
+                <p onclick="window.location = '/about'">About me</p>
+            </div>
+            <div class="bottom">
+                <p onclick="window.location = '/photos'">Photos</p>
+                <p onclick="window.location = '/articles'">Articles</p>
+            </div>
+        </div>
+        <div class="desktop-menu" hidden>
+            <p onclick="window.location = '/software'">Software</p>
+            <p onclick="window.location = '/photos'">Photos</p>
+            <p onclick="window.location = '/articles'">Articles</p>
+            <p onclick="window.location = '/about'">About me</p>
+        </div>
+
+    </div>
     <div class="page">
+        <button style="position: absolute; z-index: 9;" onclick="openmenudoor()" class="menu-button">Menu</button>
         <div class="main-content">
             <div class="header">
                 <h1>Ian Bennett</h1>
@@ -20,8 +40,8 @@
             <div class="heroimg">
                 <div class="heroimg-content">
                     <h1>Hi, I'm Ian</h1>
-                    <h5>I'm a Software Engineer at NCR Corporation and a recent Computer Science Grad from the University of Guelph. I'm an enthusiastic programmer, a dog owner, a coffee lover, and a car guy<span class="descrip-period">.</span><span class="hover">I write in all caps too</span></h5>
-                    <div class="socials">
+                    <h5>I'm a Software Engineer at NCR and a recent Computer Science Grad from the University of Guelph. I'm an enthusiastic programmer, a dog owner, coffee lover, and a car guy<span class="descrip-period">.</span><span class="hover">I write in all caps too</span></h5>
+                    <div class="socials" id="social-anchor">
                         <picture>
                             <source srcset="/assets/img/GitHub-Mark-120px-plus.webp" type="image/webp">
                             <source srcset="/assets/img/GitHub-Mark-120px-plus.png" type="image/png">
@@ -42,7 +62,7 @@
             </div>
             <div class="main-content-text">
                 <div class="content-header status-header">What am I up to now?</div>
-                <div class="content-text status-update">I completed my undergraduate degree in Computer Science at the University of Guelph, and I've just started full-time as a `SW Engineer I` at <a style="color: lightblue;" href="https://ncr.com">NCR</a>. It's an exciting time, and it's looking like a great opportunity to learn and grow my skills as a developer</div>
+                <div class="content-text status-update">In my first six months at <a style="color: lightblue;" href="https://ncr.com">NCR</a> I've been growing my skills in containerization and container orchestration systems, as well as deployment automation and management. I've also been working more with the OpenAPI specification as we transition our product support from Swagger 2.0 through to OpenAPI 3.</div>
                 <div class="content-header project-header">Some of my projects</div>
                 <!--***Desktop Slider***-->
                 <!-- Slider main container -->
@@ -197,12 +217,12 @@
                 </div>
                 <!--***End mobile slider***-->
                 <div class="content-header">Skills and Technologies</div>
-                <div class="content-text">Full Stack Web Development - Scripting Languages - Parsers - Agile development - Rapid Prototyping - Legacy Programming</div>
-                <div class="content-text">React - Redux - NodeJS - React Native - Android Java</div>
+                <div class="content-text">Full Stack Web Development - Scripting Languages - Parsers - Agile development - Rapid Prototyping - Legacy Programming - Containerization and Deployment</div>
+                <div class="content-text">React - Redux - NodeJS - React Native - OpenAPI - Android Java</div>
                 <div class="content-text">JavaScript (ES6) - Python - C - Java - HTML5/CSS3/SASS - Perl - Ruby - C# - PostgreSQL - R - M68000</div>
             </div>
             <div class="contact" id="contactme">
-                <span>You can reach me through LinkedIn, or by sending an <a href="mailto:webinquiries@ianbennett.me">email here</a></span>
+                <span>You can reach me through <a href="#social-anchor">LinkedIn</a>, or by sending an <a href="mailto:webinquiries@ianbennett.me">email here</a></span>
             </div>
             <div class="footer">
                 <h6>&trade; Ian Bennett 2017 - 2021</h6>
@@ -222,7 +242,7 @@
         </div>
     </div>
     <script src="https://unpkg.com/swiper@6.0.4/swiper-bundle.min.js"></script>
-    <script src="/assets/scripts/home.min.js"></script>
     <script src="/assets/scripts/modernizr-webp-detect.js"></script>
+    <script src="/assets/scripts/home.js"></script>
 </body>
 </html>

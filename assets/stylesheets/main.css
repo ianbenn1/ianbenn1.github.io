@@ -378,7 +378,53 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* -- Menu open page body door effect -- */
 .opendoor {
-    transform: perspective(200vw) rotateY(-30deg);
+    transform: perspective(50vw) rotateY(-3deg);
+}
+
+.menu-button {
+    height: 65px;
+    background-color: transparent;
+    width: 50px;
+    font-family: 'Ostrich-Sans-Black';
+    letter-spacing: 2px;
+    color: white;
+}
+
+.menu .mobile-menu div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+
+.menu .mobile-menu div p {
+    padding-right: 7px;
+    margin: 5px;
+}
+
+.menu p {
+    padding: 3px;
+    border: 1px solid rgb(43, 43, 43);
+    color: rgb(221, 221, 221);
+    margin-left: 3px;
+    font-family: 'Ostrich-Sans-Rounded';
+    font-weight: bolder;
+    font-size: larger;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.menu p:hover {
+    background-color: rgb(99, 109, 122);
+}
+
+/* HTML Menu background colour transition */
+html.menu-open {
+    background-color: rgb(45, 48, 53);  
+    transition: background-color 0.25s linear;
+}
+body.menu-open {
+    background-color: rgb(72, 84, 100);
+    transition: background-color 0.2s linear;
 }
 
 /* -- Media Queries --*/
@@ -467,7 +513,7 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
-@media only screen and (max-height: 832px) and (max-width: 1500px) {
+@media only screen and (max-height: 834px) and (max-width: 1500px) { /*Max height of 832 bugs out IG browser on scroll*/
     .heroimg-content h1 {
         font-size: calc(4.4em + 0.5vw);
         margin-bottom: 1px;

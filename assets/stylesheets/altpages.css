@@ -1,0 +1,341 @@
+/* -- General -- */
+/* -- Font -- */
+@font-face {
+    font-family: 'Ostrich-Sans';
+        src: url('/assets/font/webfonts/ostrich-sans-regular.woff') format('woff'), /* Pretty Modern Browsers */
+             url('/assets/font/webfonts/ostrich-sans-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('/assets/font/webfonts/ostrich-sans-regular.svg') format('svg'); /* Legacy iOS */
+    }
+    @font-face {
+    font-family: 'Ostrich-Sans-Bold';
+        src: url('/assets/font/webfonts/ostrich-sans-bold.eot'), /* IE9 Compat Modes */
+             url('/assets/font/webfonts/ostrich-sans-bold.woff') format('woff'), /* Pretty Modern Browsers */
+             url('/assets/font/webfonts/ostrich-sans-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('/assets/font/webfonts/ostrich-sans-bold.svg') format('svg'); /* Legacy iOS */
+    }
+    @font-face {
+    font-family: 'Ostrich-Sans-Black';
+        src: url('/assets/font/webfonts/ostrich-sans-black.woff') format('woff'), /* Pretty Modern Browsers */
+             url('/assets/font/webfonts/ostrich-sans-black.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('/assets/font/webfonts/ostrich-sans-black.svg') format('svg'); /* Legacy iOS */
+    }
+    @font-face {
+    font-family: 'Ostrich-Sans-Inline';
+        src: url('/assets/font/webfonts/ostrich-sans-inline-regular.eot'), /* IE9 Compat Modes */
+             url('/assets/font/webfonts/ostrich-sans-inline-regular.woff') format('woff'), /* Pretty Modern Browsers */
+             url('/assets/font/webfonts/ostrich-sans-inline-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('/assets/font/webfonts/ostrich-sans-inline-regular.svg') format('svg'); /* Legacy iOS */
+    }
+    @font-face {
+    font-family: 'Ostrich-Sans-Rounded';
+        src: url('/assets/font/webfonts/ostrich-sans-rounded.woff') format('woff'), /* Pretty Modern Browsers */
+             url('/assets/font/webfonts/ostrich-sans-rounded.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('/assets/font/webfonts/ostrich-sans-rounded.svg') format('svg'); /* Legacy iOS */
+    }
+    
+    body {
+        background-color: #eaeaea;
+        transform-origin: right;
+        transition: transform .45s;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+    
+    .text-shadow-nowebkit {
+        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    }
+    .page {
+        transform-origin: right;
+        transition: transform .45s;
+    }
+    /* -- Header -- */
+    
+    .header {
+        height: 65px;
+        background-color: rgba(111, 111, 111, 0.5);
+        position: relative;
+    }
+    
+    .header h1 {
+        color: #eaeaea;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        padding-top: 3px;
+        font-size: calc(2em + 0.1vw);
+        font-family: "Ostrich-Sans-Black";
+    }
+    
+    .header h6 {
+        color: #eaeaea;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: calc(0.7em + 0.1vw);
+        font-family: "Ostrich-Sans";
+        font-size: 1.1em;
+    }
+    
+    
+    /* -- Hero Banner -- */
+    .no-webp .heroimg {
+        margin-top: -65px;
+        height: 90vh;
+        border: 1px solid #eaeaea;
+        background-image: url(/assets/img/night-sky.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .webp .heroimg {
+        margin-top: -65px;
+        height: 90vh;
+        border: 1px solid #eaeaea;
+        background-image: url(/assets/img/night-sky.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .heroimg-content {
+        padding-top: 20vh;
+        text-align: center;
+        background-color: rgba(13, 13, 13, 0.35);
+        height: 100%;
+    }
+    .heroimg-content h1 {
+        margin-top: 0;
+        font-size: calc(8em + 0.4vw);
+        color: white;
+        font-family: "Ostrich-Sans-Rounded";
+        font-weight: 1000;
+        text-shadow: 2px 2px #000;
+        margin-bottom: 15px;
+        font-display: swap;
+    }
+    
+    .heroimg-content h5 {
+        font-size: calc(2em + 0.5vw);
+        color: white;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 10px;
+        font-family: "Ostrich-Sans-Black";
+        font-weight: 1000;
+        -webkit-text-stroke: 1.1px black;
+    }
+    .heroimg-content h5 .hover {
+        visibility: hidden;
+        position: absolute;
+        font-size: 0.4em;
+        -webkit-text-stroke: 1.1px white;
+        font-weight: 100;
+        font-family: "Ostrich-Sans";
+        background-color: #6a6a6a;
+    }
+    
+    .article-container h3 {
+        font-family: "Ostrich-Sans-Rounded";
+        color: white;
+        font-size: 28px;
+        letter-spacing: 1.25px;
+        border: 1px solid white;
+        border-radius: 25px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .article-container h3:hover {
+        color: rgb(168, 199, 231);
+        border: 1px solid rgb(168, 199, 231);
+    }
+    
+    .article-display {
+        margin: auto 0;
+        height: 80%;
+        width: 80%;
+        border: 1.5px solid white;
+        position: absolute;
+    }
+
+
+    /* -- Contact Us --*/
+    .contact {
+        background-color: #797979;
+        height: 40px;
+        text-align: center;
+        font-family: "Ostrich-Sans-Rounded";
+        color: #fff;
+        font-size: 2em;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    /* -- Footer -- */
+    .footer {
+        height: 40px;
+        text-align: center;
+        font-family: "Ostrich-Sans-Rounded";
+        color: #000;
+        font-size: 2em;
+    }
+    .footer h6 {
+        margin: 0;
+        font-size: 0.5em;
+        padding-bottom: 5px;
+        padding-top: 3px;
+    }
+    .footer .disclaimer {
+        margin: 0;
+        font-size: 10px;
+    }
+    .swiper-logo {
+        background: url(/assets/img/swiper-logo.svg) center/contain no-repeat;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        box-shadow: 0 15px 30px 0 rgba(99,50,246,.3);
+    }
+    .attribution {
+        margin-top: 35px;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .attribution-box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* -- Menu open page body door effect -- */
+    .opendoor {
+        transform: perspective(50vw) rotateY(-3deg);
+    }
+    
+    .menu-button {
+        height: 65px;
+        background-color: transparent;
+        width: 50px;
+        font-family: 'Ostrich-Sans-Black';
+        letter-spacing: 2px;
+        color: white;
+    }
+    
+    .menu .mobile-menu div {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+    
+    .menu .mobile-menu div p {
+        padding-right: 7px;
+        margin: 5px;
+    }
+    
+    .menu p {
+        padding: 3px;
+        border: 1px solid rgb(43, 43, 43);
+        color: rgb(221, 221, 221);
+        margin-left: 3px;
+        font-family: 'Ostrich-Sans-Rounded';
+        font-weight: bolder;
+        font-size: larger;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+    
+    .menu p:hover {
+        background-color: rgb(99, 109, 122);
+    }
+    
+    /* HTML Menu background colour transition */
+    html.menu-open {
+        background-color: rgb(45, 48, 53);  
+        transition: background-color 0.25s linear;
+    }
+    body.menu-open {
+        background-color: rgb(72, 84, 100);
+        transition: background-color 0.2s linear;
+    }
+    
+    /* -- Media Queries --*/
+    /* -- Header -- */
+    /* -- Hero banner -- */
+    
+    @media only screen and (max-width: 1270px) {
+        .slide-3-container .text-container p {
+            font-size: calc(1.1em + 0.3vw);
+        }
+    }
+    
+    @media only screen and (max-width: 1100px) {
+        .heroimg-content h5 {
+            margin-bottom: 20px;
+        }
+    }
+    
+    @media only screen and (max-width: 800px) {
+        .heroimg-content h5 {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 10px;
+            font-size: calc(1.75em + 0.5vw);
+        }
+    }
+    @media only screen and (max-width: 628px) {
+        .contact {
+            height: 90px;
+            padding-bottom: 0;
+        }
+    }
+    
+    /*Phones*/
+    @media only screen and (max-width: 376px) {
+        .heroimg-content h1 {
+            font-size: calc(5em + 0.5vw);
+        }
+        .heroimg-content h5 {
+            font-size: calc(1.5em + 0.5vw);
+        }
+        /*Long phones, bigger vh*/
+        @media only screen and (min-height: 790px) {
+            .heroimg-content h5 {
+                font-size: calc(1.75em + 0.5vw);
+            }
+        }
+    }
+    
+    @media only screen and (max-height: 834px) and (max-width: 1500px) { /*Max height of 832 bugs out IG browser on scroll*/
+        .heroimg-content h1 {
+            font-size: calc(4.4em + 0.5vw);
+            margin-bottom: 1px;
+            margin-top: -5px;
+        }
+        .heroimg-content h5 {
+            font-size: calc(1.7em + .5vw);
+            margin-left: 4.5%;
+            margin-right: 4.5%;
+            margin-top: 1px;
+        }
+    }
+    
+    /*Landscape phones*/
+    @media only screen and (max-height: 770px) {
+        .heroimg-content h1 {
+            font-size: calc(4.45em + 0.5vw);
+            margin-bottom: 1px;
+            margin-top: -5px;
+        }
+        .heroimg-content h5 {
+            font-size: calc(1.4em + 0.5vw);
+            margin-left: 4.5%;
+            margin-right: 4.5%;
+            margin-top: 1px;
+        }
+    }
