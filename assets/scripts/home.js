@@ -79,34 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
   \\_____\\__,_|_| |_|_|_| |_|\\___||___/`);
 });
 
-// Socials Hover
-document.querySelector(".socials .github").addEventListener("mouseover", () => {
-    document.querySelector(".socials").style.background = null;
-    document.querySelector(".socials").style.background = 'linear-gradient(90deg, rgba(155,155,155,0.7) 30%, rgba(237,237,237,0.45) 40%, rgba(255,255,255,0.35) 100%)';
-});
-document.querySelector(".socials .github").addEventListener("mouseout", () => {
-    document.querySelector(".socials").style.background = null;
-    document.querySelector(".socials").style.background = 'rgba(255, 255, 255, 0.35)';
-});
-
-document.querySelector(".socials .linkedin").addEventListener("mouseover", () => {
-    document.querySelector(".socials").style.background = null;
-    document.querySelector(".socials").style.background = 'linear-gradient(90deg, rgba(237,237,237,0.45) 30%, rgba(137,137,137,0.9) 50%, rgba(255,255,255,0.35) 70%)';
-});
-document.querySelector(".socials .linkedin").addEventListener("mouseout", () => {
-    document.querySelector(".socials").style.background = null;
-    document.querySelector(".socials").style.background = 'rgba(255, 255, 255, 0.35)';
-});
-
-document.querySelector(".socials .instagram").addEventListener("mouseover", () => {
-    document.querySelector(".socials").style.background = null;
-    document.querySelector(".socials").style.background = 'linear-gradient(90deg, rgba(237,237,237,0.45) 0%, rgba(255,255,255,0.35) 60%, rgba(137,137,137,0.7) 70%)';
-});
-document.querySelector(".socials .instagram").addEventListener("mouseout", () => {
-    document.querySelector(".socials").style.background = null;
-    document.querySelector(".socials").style.background = 'rgba(255, 255, 255, 0.35)';
-});
-
 //Socials onclick
 document.querySelector(".socials .github").onclick = () => {
     var tab = window.open('https://github.com/ianbenn1', '_blank');
@@ -120,8 +92,6 @@ document.querySelector(".socials .instagram").onclick = () => {
     var tab = window.open('https://www.instagram.com/ianbenn1/', '_blank');
     tab.focus();
 };
-
-
 
 
 
