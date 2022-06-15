@@ -100,7 +100,7 @@ document.querySelector(".socials .instagram").onclick = () => {
 //header type easter egg
 document.querySelector(".header h6").onclick = () => {
     document.querySelector(".header h6").append(" ");
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', (e) => {
         if (e.keyCode == 32) { e.preventDefault(); }
         document.querySelector(".header h6").append(String.fromCharCode(e.keyCode))
     });
