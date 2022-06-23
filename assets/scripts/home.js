@@ -8,11 +8,23 @@ document.addEventListener("DOMContentLoaded", () => {
     //Set background based on local time
     var cur_hr = (new Date()).getHours();
     if (cur_hr >= 17 && cur_hr < 20){ //Evening
-        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve_crop1.jpg')";
+        if (document.querySelector("html.webp"))
+        {
+            document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve.webp')";
+        }
+        else {
+            document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_eve_crop1.jpg')";
+        }
     }
     else if (cur_hr >= 20 || cur_hr < 5) //night
     {
-        document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.jpg')";
+        if (document.querySelector("html.webp"))
+        {
+            document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.webp')";
+        }
+        else {
+            document.querySelector(".heroimg").style.backgroundImage  = "url('/assets/img/bg_main_night.jpg')";
+        }
     }
     else { //day
 
