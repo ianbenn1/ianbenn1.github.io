@@ -36,7 +36,7 @@ font-family: 'Ostrich-Sans-Rounded';
 body {
     background-color: #eaeaea;
     transform-origin: right;
-    transition: transform .45s;
+    transition: transform 0.45s;
 }
 h1, h2, h3, h4, h5, h6, p {
     font-family: "Segoe UI", Arial, sans-serif;
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .page {
     transform-origin: right;
-    transition: transform .45s;
+    transition: transform 0.45s;
 }
 /* -- Header -- */
 
@@ -378,7 +378,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* -- Menu open page body door effect -- */
 .opendoor {
-    transform: perspective(50vw) rotateY(-3deg);
+    /* transform: perspective(50px) rotateY(-0.1deg); */
+    /* transform: skew(-6deg, -0.5deg); */
 }
 
 .menu-button {
@@ -388,17 +389,39 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'Ostrich-Sans-Black';
     letter-spacing: 2px;
     color: white;
+    transition: 0.3s;
 }
 
-.menu .mobile-menu div {
+.menu-button.menu-open{
+    height: 285px;
+    width: 270px;
+}
+
+.menu {
+    position: absolute;
+    z-index: 10;
+    width: 270px;
+    height: 285px;
+}
+
+.menu .top {
+    padding-top: 65px;
+}
+
+.menu div {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin-bottom: 0;
+    height: 102px;
 }
 
-.menu .mobile-menu div p {
+.menu div p {
     padding-right: 7px;
     margin: 5px;
+    width: 80px;
+    padding-top: 30px;
+    background-color: rgba(111, 111, 111, 0.5);
 }
 
 .menu p {
