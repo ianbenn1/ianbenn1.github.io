@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log(window.location.search.substring(1));
+            fetch(`https://raw.githubusercontent.com/ianbenn1/${window.location.search.substring(1)}/main/index.html`)
+            .then(resp => {
+                resp.text().then(data => {
+                    if(data)
+                    {
+                        document.querySelector(".container").innerHTML = data;
+                    }
+                });
+            })
+            .catch(e => {
+                document.querySelector(".container").innerHTML = e;
+            });
+            fetch(`https://raw.githubusercontent.com/ianbenn1/${window.location.search.substring(1)}/main/style.css`)
+            .then(resp => {
+                resp.text().then(data => {
+                    if(data)
+                    {
+                        let style = document.createElement("style");
+                        style.textContent = data;
+                        document.head.appendChild(style);
+                    }
+                });
+            });
+            fetch(`https://raw.githubusercontent.com/ianbenn1/${window.location.search.substring(1)}/main/index.js`)
+            .then(resp => {
+                resp.text().then(data => {
+                    if(data)
+                    {
+                        let script = document.createElement("script");
+                        script.textContent = data;
+                        document.head.appendChild(script);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Loading...</h1>
+    </div>
+</body>
+</html>
