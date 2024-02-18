@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p {
     height: 90vh;
     border: 1px solid #eaeaea;
     background-image: url(/assets/img/bg_main_day_crop4.jpg);
-    background-position: center;
+    background-position: 0% 25%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6, p {
     height: 90vh;
     border: 1px solid #eaeaea;
     background-image: url(/assets/img/bg_main_day_lq.webp);
-    background-position: center;
+    background-position: 0% 25%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -115,14 +115,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .heroimg-content h5 {
-    font-size: calc(2em + 0.5vw);
+    font-size: calc(2.2em + 0.5vw);
     color: #fff;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 10px;
     font-family: "Ostrich-Sans-Black";
     font-weight: 1000;
-    -webkit-text-stroke: 1.1px black;
+    -webkit-text-stroke: 1px black;
 }
 .heroimg-content h5 .hover {
     visibility: hidden;
@@ -131,7 +131,9 @@ h1, h2, h3, h4, h5, h6, p {
     -webkit-text-stroke: 1.1px white;
     font-weight: 100;
     font-family: "Ostrich-Sans";
-    background-color: #6a6a6a;
+    background-color: #636363;
+    padding: 4px;
+    border-radius: 3px;
 }
 .socials {
     background-color: rgba(255, 255, 255, 0.35);
